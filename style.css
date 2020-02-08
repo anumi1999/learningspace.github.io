@@ -1,0 +1,88 @@
+body{
+    margin : 0;
+    padding : 0;
+    font-family: candara;
+}
+header{
+    position : absolute ;
+    top : 0 ;
+    left : 0 ;
+    padding: 0 100px;
+    width : 100%;
+    box-sizing: border-box; 
+    background: yellow; 
+}
+header nav{
+    float: right;
+}
+header img{
+    height : 100px;
+    width : 100px;
+    float : left;
+}
+header nav ul{
+    margin : 0;
+    padding-top : 20px; 
+    display : flex;
+}
+header nav ul li {
+    list-style: none;
+}
+header nav ul li a{
+    height:50px ; 
+    line-height: 50px;
+    padding : 0 20px; 
+    text-decoration: none;
+    color : blue ; 
+    font-size: 20px;
+    display: block;
+    border-radius: 10px 10px;
+}
+header nav ul li a:hover {
+    color : greenyellow ; 
+    background: blue;
+    text-decoration: none;
+}
+.menu-toogle{
+    color : #fff;
+    float : right;
+    line-height: 100px;
+    font-size: 24px;
+    cursor:pointer;
+    display : none;
+}
+@media (max-width: 991px)
+{
+    header {
+        padding : 0 20px;
+    }
+    .menu-toggle{
+        display: block; 
+    }
+    header nav {
+        position: absolute;
+        width : 100%;
+        height : calc(100vh - 100px);
+        background: yellow ;
+        top: 100px;
+        left:-100%;
+        transition : 0.5s;
+    }
+    header nav .active {
+        left : 0;
+    }
+    header nav ul {
+        display : block ;
+        text-align: center;
+    }
+    header nav ul li a {
+        border-bottom: 1px solid rgba(0,0,0,0.2);
+    }
+}
+.about {
+    background-color: yellow ;
+    padding : 30px 40px;
+}
+.about h1{
+    text-align: center;
+}
